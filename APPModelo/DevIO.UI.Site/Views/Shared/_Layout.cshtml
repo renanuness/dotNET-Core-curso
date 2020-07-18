@@ -11,7 +11,7 @@
               asp-fallback-href="~/lib/bootstrap/css/bootstrap.css"
               asp-fallback-test-class="sr-only" asp-fallback-test-property="position" asp-fallback-test-value="absolute"
               crossorigin="anonymous"
-              integrity="sha256-eSi1q2PG6J7g7ib7yAaWMcrr5GrtohYChqibrV7PBE=" />
+              integrity="sha512-iQQV+nXtBlmS3XiDrtmL+9/Z+ibux+YuowJjI4rcpO7NYgTzfTOiFNm09kWtfZzEB9fQ6TwOVc8lFVWooFuD/w==" />
     </environment>
     <link rel="stylesheet" href="~/lib/font-awesome/css/fontawesome.css" />
 
@@ -31,6 +31,12 @@
                             <li class="nav-item">
                                 <a class="nav-link text-dark" asp-area="" asp-controller="Home" asp-action="Index">Home</a>
                             </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Produtos" asp-controller="Cadastro" asp-action="Index">Cadastro</a>
+                            </li>
+                            <li class="nav-item">
+                                <a class="nav-link text-dark" asp-area="Vendas" asp-controller="Pedidos" asp-action="Index">Cadastro</a>
+                            </li>
                         </ul>
                     </div>
                 </div>
@@ -43,9 +49,9 @@
             </main>
         </div>
 
-        <footer class="border-top card-footer text-muted">
+        <footer class="border-top footer text-muted">
             <div class="container">
-                Rodapé
+                Minha App Modelo - <email>email@emaill.com</email> 
             </div>
         </footer>
 
@@ -58,13 +64,13 @@
                     asp-fallback-src="~/lib/jquery/jquery.js"
                     asp-fallback-test="window.jQuery"
                     crossorigin="anonymous"
-                    integrity="sha256-FgpCb/KJQlLNfOu91ta32o/NMZxltwRo8QtmkMRdAu8=">
+                    integrity="sha512-+NqPlbbtM1QqiK8ZAo4Yrj2c4lNQoGv8P79DPtKzj++l5jnN39rHA/xsqn8zE9l0uSoxaCdrOgFs6yjyfbBxSg==">
             </script>
             <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.bundle.min.js"
                     asp-fallback-src="~/lib/bootstrap/js/bootstrap.js"
                     asp-fallback-test="window.jQuery && window.jQuery.fn && window.jQuery.fn.modal"
                     crossorigin="anonymous"
-                    integrity="sha384-xrRywqdh3PHs8keKZN+8zzc5TX0GRTLCcmivcbNJWm2rs5C8PRhcEn3czEjhAO9o">
+                    integrity="sha512-TqmAh0/sSbwSuVBODEagAoiUIeGRo8u95a41zykGfq5iPkO9oie8IKCgx7yAr1bfiBjZeuapjLgMdp9UMpCVYQ==">
             </script>
             <script src="~/js/site.js"></script>
         </environment>
