@@ -32,7 +32,7 @@ namespace NerdStore.Vendas.Application.Commands
     {
         public AdicionarItemPedidoValidation() 
         {
-            RuleFor(c => c.ClientId)
+            RuleFor(c => c.ClienteId)
                 .NotEqual(Guid.Empty)
                 .WithMessage("Id do cliente inválido");
 
