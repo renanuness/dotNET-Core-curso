@@ -1,11 +1,13 @@
 ﻿using Microsoft.EntityFrameworkCore;
+using Microsoft.EntityFrameworkCore.Metadata.Builders;
 using NerdStore.Core.Data;
+using NerdStore.Core.Messages;
 using NerdStore.Vendas.Domain;
 using System;
 using System.Linq;
 using System.Threading.Tasks;
-namespace NerdStore.Vendas.Data
 
+namespace NerdStore.Vendas.Data
 {
     public class VendasContext : DbContext, IUnitOfWork
     {
@@ -40,10 +42,17 @@ namespace NerdStore.Vendas.Data
             foreach (var property in modelBuilder.Model.GetEntityTypes().SelectMany(
                 e => e.GetProperties().Where(p => p.ClrType == typeof(string))))
             {
-                
+                property.SetColumnType("varchar(100)");
             }
 
+            modelBuilder.Ignore<Event>();
+
             modelBuilder.ApplyConfigurationsFromAssembly(typeof(VendasContext).Assembly);
+
+            foreach (var realtionship in modelBuilder.Model.GetEntityTypes().SelectMany(e => e.GetForeignKeys())) realtionship.DeleteBehavior = DeleteBehavior.Cascade;
+
+            modelBuilder.HasSequence<int>("MinhaSequencia").StartsAt(1000).IncrementsBy(1);
+            base.OnModelCreating(modelBuilder);
         }
     }
 }

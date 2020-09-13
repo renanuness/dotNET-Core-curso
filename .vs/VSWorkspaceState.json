@@ -2,8 +2,9 @@
   "ExpandedNodes": [
     "",
     "\\MinhaAPICompleta\\src",
-    "\\MinhaAppMvcCompleta\\src"
+    "\\NerdStore",
+    "\\NerdStore\\src"
   ],
-  "SelectedNode": "\\MinhaAPICompleta",
+  "SelectedNode": "\\NerdStore\\src\\NerdStore.Vendas.Data",
   "PreviewInSolutionExplorer": false
 }
